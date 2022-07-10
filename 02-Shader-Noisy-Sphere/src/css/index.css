@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+39&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&display=swap');
+
+#app {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+#app canvas {
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+}
+
+#app h1 {
+    position: absolute;
+    width: 60vw;
+    height: 100vh;
+    padding: 2rem 5rem;
+    box-sizing: border-box;
+    word-wrap:break-word;
+    font-size: 5rem;
+    overflow: hidden;
+    letter-spacing: 1rem;
+    mix-blend-mode:hue;
+    font-family: 'Libre Barcode 39', cursive;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+}
+
+@keyframes shaking {
+    0% {
+        color: #ccc;
+    }
+    50% {
+        color: pink;
+    }
+    100% {
+        color: #ccc;
+    }
+}
+
+#app h1 span {
+     font-family: 'Bungee Shade', cursive;
+     color: rgb(0, 255, 183);
+     font-size: 3.8rem;
+     line-height: 10px;
+     transition: all 0.5s ease-in-out;
+}
