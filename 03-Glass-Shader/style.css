@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  background-color: rgb(0, 0, 0);
+}
+
+@keyframes border {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate3d(1, 1, 0, 22deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+section {
+  display: flex;
+  width: 20vw;
+  height: 100vh;
+  background: rgb(0,0,0);
+  animation: border 5s infinite;
+  transform: rotate3d(1, 1, 0, 30deg);
+}
+
+section:nth-child(odd) {
+  flex-direction: column;
+}
+
+section:nth-child(even) {
+  flex-direction: column-reverse;
+}
+
+.title {
+  width: 20vw;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title p {
+  color: rgb(139, 139, 139);
+  font-size: 0.5rem;
+  font-family: 'Parisienne', cursive;
+  display: inline;
+  padding: 1rem;
+}
+
+.title p span {
+  font-size: 2rem;
+  color: rgb(229, 231, 230);
+  font-family: 'Parisienne', cursive;
+  font-weight: 700;
+}
+
+.title:nth-child(odd) p{
+  text-align: right;
+}
+
+.title:nth-child(even) p{
+  text-align: left;
+}
+
+.canvas-holder {
+  width: 20vw;
+  height: 80vh;
+}
+
+canvas {
+  background-color: red;
+  border-radius: 1rem;
+}
