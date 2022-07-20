@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  position: relative;
+  overflow: hidden;
+  background-color: rgb(0, 0, 0);
+}
+
+.canvas-container {
+  width: 125vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.canvas-holder {
+  width: 25vw;
+  height: 25vw;
+}
+
+.canvas-holder canvas {
+  background-color: #fff;
+  margin-top: -12.5vw;
+  margin-left: -12.5vw;
+}
+
+@keyframes fontEffect {
+  0% {
+    font-size: 8rem;
+    opacity: 1;
+    transform: rotate3d(1, 1, 0, -15deg);
+  }
+  50% {
+    font-size: 7.9rem;
+    opacity: .8;
+    transform: rotate3d(1, 1, 0, 15deg);
+  }
+  100% {
+    font-size: 8rem;
+    opacity: 1;
+    transform: rotate3d(1, 1, 0, -15deg);
+  }
+}
+
+.text, .text2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+}
+
+.text h1, .text2 h1 {
+  color: #ccc;
+  font-size: 8rem;
+  /* font-family: 'GFS Didot', serif; */
+  font-family: 'Archivo Black', sans-serif;
+  animation: fontEffect 8s infinite;
+  transition: all .5s ease-in-out;
+}
+
+.text {
+  mix-blend-mode:color-dodge;
+}
+
+.text2 {
+  mix-blend-mode: exclusion;
+}
+
